@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #ff6b6b;
+            font-size: 3rem;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #333;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            background-color: #ff6b6b;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #e63946;
+        }
+        .hidden-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #2d6a4f;
+            background: #d4edda;
+            padding: 15px;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        function showMessage() {
+            document.getElementById('hiddenMessage').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>I'm Sorry</h1>
+        <p>I truly regret what happened. Please forgive me.</p>
+        <button class="button" onclick="showMessage()">Accept Apology</button>
+        <div id="hiddenMessage" class="hidden-message">
+            Thank you for forgiving me! You're a gem 🤗
+        </div>
+    </div>
+</body>
+</html>
