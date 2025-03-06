@@ -52,10 +52,31 @@
             padding: 15px;
             border-radius: 10px;
         }
+        .reject-button {
+            position: absolute;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            background-color: #6c757d;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: 0.2s;
+        }
     </style>
     <script>
         function showMessage() {
             document.getElementById('hiddenMessage').style.display = 'block';
+        }
+        function moveButton() {
+            let button = document.getElementById('rejectButton');
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            button.style.position = 'absolute';
+            button.style.left = x + 'px';
+            button.style.top = y + 'px';
         }
     </script>
 </head>
@@ -64,8 +85,9 @@
         <h1>I'm Sorry</h1>
         <p>I truly regret what happened. Please forgive me.</p>
         <button class="button" onclick="showMessage()">Accept Apology</button>
+        <button id="rejectButton" class="reject-button" onmouseover="moveButton()">Reject</button>
         <div id="hiddenMessage" class="hidden-message">
-            Thank you for forgiving me! You're a gem 🤗
+            Thank you for forgiving me! You're a gem HASEENA 🤗
         </div>
     </div>
 </body>
